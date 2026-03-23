@@ -14,5 +14,10 @@ public class Collectible : MonoBehaviour
     {
         transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime , Space.Self);
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+    }
+
 }
