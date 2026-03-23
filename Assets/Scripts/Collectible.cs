@@ -5,6 +5,11 @@ public class Collectible : MonoBehaviour
 
     [SerializeField] private float rotationSpeed = 20f;
 
+    private void Start()
+    {
+       
+    }
+
     private void Update()
     {
         RotateAround();
@@ -19,5 +24,6 @@ public class Collectible : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
 
 }
