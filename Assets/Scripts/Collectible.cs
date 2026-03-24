@@ -4,10 +4,12 @@ public class Collectible : MonoBehaviour
 {
 
     [SerializeField] private float rotationSpeed = 30f;
+    private int scoreToAdd = 10;
+    private GameManager gameManager;
 
     private void Start()
     {
-       
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     private void Update()
@@ -23,6 +25,7 @@ public class Collectible : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
+        gameManager.UpdateScore(scoreToAdd);
     }
 
 
