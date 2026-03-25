@@ -50,8 +50,10 @@ public class GameManager : MonoBehaviour
             {
                 time -= Time.deltaTime;
             }
+            time = Mathf.Max(time , 0);
             timeText.text = "Time: " + Mathf.FloorToInt(time).ToString();
-            if (time == 0)
+
+            if (time <= 0)
             {
                 GameOver();
             }
