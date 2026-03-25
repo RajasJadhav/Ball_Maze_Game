@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     private float time;
     public bool isGameActive;
 
+    public AudioClip gameOverSound;
+
     private void Start()
     {
         
@@ -67,6 +69,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         isGameActive = false;
+        AudioSource.PlayClipAtPoint(gameOverSound,transform.position);
         gameOverScreen.SetActive(true);
 
     }

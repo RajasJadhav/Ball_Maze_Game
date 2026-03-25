@@ -6,6 +6,7 @@ public class Collectible : MonoBehaviour
     [SerializeField] private float rotationSpeed = 30f;
     private int scoreToAdd = 10;
     private GameManager gameManager;
+    public AudioClip collectSound;
 
     private void Start()
     {
@@ -28,6 +29,7 @@ public class Collectible : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        AudioSource.PlayClipAtPoint(collectSound, transform.position);
         Destroy(gameObject);
         gameManager.UpdateScore(scoreToAdd);
     }
