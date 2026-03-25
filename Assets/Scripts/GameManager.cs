@@ -7,10 +7,12 @@ public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timeText;
+
     public Button startButton;
 
     public GameObject titleScreen;
     public GameObject gameOverScreen;
+    public GameObject gameWinScreen;
 
     private int score;
     private float time;
@@ -72,5 +74,11 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void GameWin()
+    {
+        isGameActive = false;
+        gameWinScreen.SetActive(true);
     }
 }
