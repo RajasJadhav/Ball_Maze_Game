@@ -1077,7 +1077,7 @@ MonoBehaviour:
   timeText: {fileID: 1365274254}
   startButton: {fileID: 1564176695}
   titleScreen: {fileID: 1470037871}
-  gameOverScreen: {fileID: 1191460354}
+  gameOverScreen: {fileID: 0}
   isGameActive: 0
 --- !u!1 &404719362
 GameObject:

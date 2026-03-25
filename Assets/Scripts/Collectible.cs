@@ -19,7 +19,11 @@ public class Collectible : MonoBehaviour
 
     private void RotateAround()
     {
-        transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime , Space.Self);
+        if(gameManager.isGameActive)
+        {
+            transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.Self);
+        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
